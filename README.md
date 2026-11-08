@@ -1,9 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/slim-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="docs/slim-light.svg">
-    <img src="docs/slim-light.svg" alt="slim-claude-md: 202 KB before, 14 KB after" width="880">
-  </picture>
+  <img src="docs/slim-hero.svg" alt="slim-claude-md: a 1.2 MB CLAUDE.md becomes 40 KB, the rest moves to docs/notes/" width="880">
 </p>
 
 <p align="center">
