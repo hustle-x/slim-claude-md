@@ -1,29 +1,37 @@
+# slim-claude-md
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Claude_Code-skill-555?style=for-the-badge" alt="Claude Code skill">
+  <img src="https://img.shields.io/badge/python-3.8+-555?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.8+">
+  <img src="https://img.shields.io/badge/dependencies-none-555?style=for-the-badge" alt="No dependencies">
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/hustle-x/slim-claude-md?style=for-the-badge&color=green" alt="License"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/hustle-x/slim-claude-md/stargazers"><img src="https://img.shields.io/github/stars/hustle-x/slim-claude-md?style=flat-square&logo=github" alt="GitHub stars"></a>
+  <a href="https://github.com/hustle-x/slim-claude-md/commits/main"><img src="https://img.shields.io/github/last-commit/hustle-x/slim-claude-md?style=flat-square" alt="Last commit"></a>
+  <img src="https://img.shields.io/badge/network-none-brightgreen?style=flat-square" alt="No network access">
+  <a href="https://github.com/hustle-x/hustle-design-kit"><img src="https://img.shields.io/badge/part_of-hustle--design--kit-555?style=flat-square" alt="Part of hustle-design-kit"></a>
+</p>
+
+Your CLAUDE.md is read in full at the start of every session, and most of it is history you rarely need. This skill moves that history out word for word, keeps a short CLAUDE.md, and proves nothing was lost.
+
 <p align="center">
   <img src="docs/slim-hero.svg" alt="slim-claude-md: a 1.2 MB CLAUDE.md becomes 40 KB, the rest moves to docs/notes/" width="880">
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License"></a>
-  <img src="https://img.shields.io/badge/Claude_Code-skill-d97757.svg" alt="Claude Code skill">
-  <img src="https://img.shields.io/badge/Python-3.8%2B-3776ab.svg" alt="Python 3.8+">
-  <img src="https://img.shields.io/badge/dependencies-none-brightgreen.svg" alt="No dependencies">
-  <img src="https://img.shields.io/badge/network-none-brightgreen.svg" alt="No network access">
-</p>
-
-<h4 align="center">Your CLAUDE.md is read in full at the start of every session. Most of it is history you rarely need.</h4>
-
-<p align="center">
-  <a href="#quick-start">Quick Start</a> •
-  <a href="#how-it-works">How It Works</a> •
-  <a href="#what-stays-and-what-moves">What Stays</a> •
-  <a href="#the-safety-check">Safety Check</a> •
-  <a href="#faq">FAQ</a> •
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="#how-it-works">How It Works</a> ·
+  <a href="#what-stays-and-what-moves">What Stays</a> ·
+  <a href="#the-safety-check">Safety Check</a> ·
+  <a href="#faq">FAQ</a> ·
   <a href="#license">License</a>
 </p>
 
 ---
 
-## The problem
+## The Problem
 
 On a long project, `CLAUDE.md` turns into a diary: dated status notes,
 decisions that are already built, previews that were rejected, fixes from
@@ -36,7 +44,9 @@ under `docs/notes/`. What stays is a short `CLAUDE.md` with the rules you need
 every time plus an index that tells Claude which notes file to read when it
 works on that topic. A line-by-line check proves nothing was lost.
 
-## Real result
+---
+
+## Real Result
 
 From the project this skill was built on:
 
@@ -49,6 +59,8 @@ From the project this skill was built on:
 
 Nothing about how you work changes. Claude still has every note; it just reads
 the one it needs, when it needs it.
+
+---
 
 ## Quick Start
 
@@ -76,7 +88,9 @@ slim my CLAUDE.md
 
 or run `/slim-claude-md`.
 
-## How it works
+---
+
+## How It Works
 
 ```mermaid
 flowchart LR
@@ -101,7 +115,9 @@ flowchart LR
 6. **Verify** with `verify.py`. If any line is missing, it goes back and fixes it.
 7. **Report** old size, new size, tokens saved, the notes files and the backup.
 
-## What stays and what moves
+---
+
+## What Stays and What Moves
 
 | Stays in `CLAUDE.md` | Moves to `docs/notes/<topic>.md` |
 |---|---|
@@ -116,7 +132,9 @@ flowchart LR
 When in doubt, it keeps the line. The index also tells Claude to add **new**
 notes to the matching notes file, so `CLAUDE.md` stays small afterwards.
 
-## The safety check
+---
+
+## The Safety Check
 
 `verify.py` compares the backup with the new files. Every non-empty line of
 the original must appear in the new set **at least as many times as before**.
@@ -136,46 +154,72 @@ If anything went missing it prints the lines and exits with code 1.
 - Never touches the network.
 - Reads only the files you pass it.
 
-## Rules the skill follows
+---
+
+## Rules the Skill Follows
 
 - Never deletes, summarises or rewords moved text.
 - Never touches code, settings or any file other than `CLAUDE.md` and `docs/notes/`.
 - Always keeps a backup of the original.
 - Does not finish until `verify.py` prints `OK`.
 
+---
+
 ## FAQ
 
-**Will Claude forget things?**
+<details>
+<summary><b>Will Claude forget things?</b></summary>
+
 No. Every line is still in the repo. The index in `CLAUDE.md` names each notes
 file and what is in it, and tells Claude to read the matching one before
 working on that topic.
+</details>
 
-**Why not just summarise the old notes?**
+<details>
+<summary><b>Why not just summarise the old notes?</b></summary>
+
 Summaries lose details: a file name, a flag, the reason a fix was made. Moving
 text word for word keeps them, and `verify.py` can prove it.
+</details>
 
-**How many tokens does this save?**
+<details>
+<summary><b>How many tokens does this save?</b></summary>
+
 Roughly 1 token per 4 bytes removed from `CLAUDE.md`, on every session start.
 The report prints the estimate for your file.
+</details>
 
-**My CLAUDE.md is small. Do I need this?**
+<details>
+<summary><b>My CLAUDE.md is small. Do I need this?</b></summary>
+
 No. Under ~25 KB the skill says so and stops.
+</details>
 
-**Can I undo it?**
+<details>
+<summary><b>Can I undo it?</b></summary>
+
 Yes. Restore the backup it made, or use git.
+</details>
 
-**Does it work without Claude Code?**
+<details>
+<summary><b>Does it work without Claude Code?</b></summary>
+
 The method is plain Markdown and `verify.py` is a standalone script, so you
 can follow the steps in `SKILL.md` by hand with any agent.
+</details>
 
-## Repository layout
+---
+
+## Repository Layout
 
 ```
 slim-claude-md/
 ├── SKILL.md      the steps Claude follows
 └── verify.py     the line-by-line check
-docs/             README banners
+docs/             README banner
 ```
+
+---
 
 ## License
 
