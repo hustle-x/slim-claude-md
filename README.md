@@ -1,8 +1,8 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/banner-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="docs/banner-light.svg">
-    <img src="docs/banner-light.svg" alt="slim-claude-md: 202 KB before, 14 KB after" width="880">
+    <source media="(prefers-color-scheme: dark)" srcset="docs/banner-dark.svg?v=2">
+    <source media="(prefers-color-scheme: light)" srcset="docs/banner-light.svg?v=2">
+    <img src="docs/banner-light.svg?v=2" alt="slim-claude-md: 202 KB before, 14 KB after" width="880">
   </picture>
 </p>
 
