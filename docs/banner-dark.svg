@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="260" viewBox="0 0 880 260" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="880" height="260" rx="18" fill="#0f1115" stroke="#2a2d36"/>
+  <text x="56" y="92" font-size="44" font-weight="800" fill="#eef0f6" letter-spacing="-1">slim-claude-md</text>
+  <text x="56" y="128" font-size="18" fill="#8a90a2">Make CLAUDE.md small again. Lose nothing.</text>
+  <text x="56" y="178" font-size="13" font-weight="600" fill="#8a90a2" font-family="ui-monospace, Menlo, monospace">BEFORE</text>
+  <rect x="140" y="164" width="684" height="18" rx="5" fill="#3a3e4a"/>
+  <text x="824" y="200" font-size="13" fill="#8a90a2" text-anchor="end" font-family="ui-monospace, Menlo, monospace">202 KB · ~50,000 tokens every session</text>
+  <text x="56" y="228" font-size="13" font-weight="600" fill="#8a90a2" font-family="ui-monospace, Menlo, monospace">AFTER</text>
+  <rect x="140" y="214" width="49" height="18" rx="5" fill="#d97757"/>
+  <text x="200" y="228" font-size="13" fill="#eef0f6" font-family="ui-monospace, Menlo, monospace">14 KB · ~3,600 tokens · every line kept in docs/notes/</text>
+</svg>
