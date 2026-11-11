@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/Claude_Code-skill-555?style=for-the-badge" alt="Claude Code skill">
   <img src="https://img.shields.io/badge/python-3.8+-555?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.8+">
   <img src="https://img.shields.io/badge/dependencies-none-555?style=for-the-badge" alt="No dependencies">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-use--only-c0392b?style=for-the-badge" alt="License: use only, all rights reserved"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-555?style=for-the-badge" alt="License: MIT"></a>
 </p>
 
 <p align="center">
@@ -223,6 +223,4 @@ docs/             README banner
 
 ## License
 
-**All rights reserved.** slim-claude-md is free to install and use, for personal or commercial work. You may **not** copy, modify, remake, redistribute or sell it, or use it to build a competing product, without written permission from hustle-x.
-
-Full terms: [LICENSE](LICENSE) (hustle-x Use-Only License 1.0). To ask for permission, [open an issue](https://github.com/hustle-x/slim-claude-md/issues).
+[MIT](LICENSE). Free to use, change and share.
